@@ -29,21 +29,22 @@
 	border: 1px solid black;
 } */
 
-.stoichiometry_table{
-    table-layout: fixed;
-    border-spacing: 0px;
-    border-collapse: collapse;
-    margin: 20px;
-    width: 1%;
-    table-layout: auto !important;
+.stoichiometry_table {
+  table-layout: fixed;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  margin: 20px;
+  width: 1%;
+  table-layout: auto !important;
 }
-.stoichiometry_table th, .stoichiometry_table td{
-    border: 1px solid black;
-    font-family: 'Times New Roman', serif;
-    color: black;
-    margin:0px;
-    width: auto !important;
-    white-space: nowrap;
-    padding-left:10px !important;
-    padding-right:10px !important;
+.stoichiometry_table th,
+.stoichiometry_table td {
+  border: 1px solid black;
+  font-family: "Times New Roman", serif;
+  color: black;
+  margin: 0px;
+  width: auto !important;
+  white-space: nowrap;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
 }

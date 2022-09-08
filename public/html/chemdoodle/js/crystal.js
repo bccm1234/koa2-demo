@@ -28,7 +28,7 @@ function crystalPrepare(cifUrl) {
       console.log(hdr);
       console.log(status);
       console.error("Failed to load file" + cifUrl + ": " + err);
-    }
+    },
   });
 }
 //以默认参数创建模型

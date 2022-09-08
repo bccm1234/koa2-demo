@@ -3,7 +3,7 @@ let cifData, cubeData, viewer, voldata;
 function isoPrepare(config) {
   //---create canvas---//
   viewer = $3Dmol.createViewer(config.divId, {
-    backgroundColor: "#EEF5FF"
+    backgroundColor: "#EEF5FF",
   });
   //---get cif file---//
   jQuery.ajax({
@@ -17,7 +17,7 @@ function isoPrepare(config) {
       console.log(hdr);
       console.log(status);
       console.error("Failed to load file" + config.cifUrl + ": " + err);
-    }
+    },
   });
   //---get cube file---//
   jQuery.ajax({
@@ -31,7 +31,7 @@ function isoPrepare(config) {
       console.log(hdr);
       console.log(status);
       console.error("Failed to load file" + config.cubeUrl + ": " + err);
-    }
+    },
   });
 }
 //以默认参数创建模型
@@ -42,12 +42,12 @@ function modelCreate() {
   viewer.addIsosurface(voldata, {
     isoval: 0.01,
     color: "#ffff56",
-    opacity: 0.85
+    opacity: 0.85,
   });
   viewer.addIsosurface(voldata, {
     isoval: -0.01,
     color: "#78fbfd",
-    opacity: 0.85
+    opacity: 0.85,
   });
   viewer.render(); /* render scene */
   //---draw atoms&bonds part---//
@@ -59,12 +59,12 @@ function modelCreate() {
     {
       stick: {
         colorscheme: "Jmol",
-        radius: 0.2
+        radius: 0.2,
       },
       sphere: {
         colorscheme: "Jmol",
-        radius: 0.4
-      }
+        radius: 0.4,
+      },
     }
   );
   //---setting part---//
@@ -85,12 +85,12 @@ function resetting(config) {
   viewer.addIsosurface(voldata, {
     isoval: config.isovalPositive,
     color: config.isoPositiveColor,
-    opacity: 0.85
+    opacity: 0.85,
   });
   viewer.addIsosurface(voldata, {
     isoval: config.isovalNegative,
     color: config.isoNegativeColor,
-    opacity: 0.85
+    opacity: 0.85,
   });
   //---draw unitcell---//
   viewer.addUnitCell();

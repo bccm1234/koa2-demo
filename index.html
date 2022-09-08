@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="one" style="font-size: 24px; color: red; text-align: center"></div>
+  </body>
+  <script>
+    var timer = setInterval("change()", 1000);
+    function change() {
+      let div = document.getElementById("one");
+      let nowTime = new Date();
+      let Time = new Date("2022-12-31");
+      let diff = Time - nowTime;
+      let year = 2022;
+      let day = Math.floor(diff / 86400000);
+      let hour = Math.floor((diff % 86400000) / 3600000);
+      let minute = Math.floor((diff % 3600000) / 60000);
+      let second = Math.floor((diff % 60000) / 1000);
+      let str = `${year}年还剩${day}天${hour}时${minute}分${second}秒`;
+      div.innerHTML = str;
+    }
+  </script>
+</html>
